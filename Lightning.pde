@@ -1,4 +1,4 @@
-int startX = 0, startY = 150, endX = 0, endY = 150;
+int startX = 150, startY = 0, endX = 150, endY = 0;
 float inp;
 void setup() {
   size(300, 300);
@@ -19,18 +19,18 @@ void mousePressed() {
   } else {    //want 10% execution here
     stroke(255);
   }
-  while (endX <= width) {
+  while (endY <= height) {
     fill(255, 0, 0, 200);
-    endX = startX +((int)(Math.random()*9));
-    endY = startY +((int)(Math.random()*18)-9);
+    endX = startX +((int)(Math.random()*18)-9);
+    endY = startY +((int)(Math.random()*9));
     line(startX, startY, endX, endY);
     startX = endX;
     startY = endY;
   }
-  startX = 0;
-  endX = 0;
-  startY = 150;
-  endY = 150;
+  startX = 150;
+  endX = 150;
+  startY = 0;
+  endY = 0;
 }
 
 void keyPressed() {
