@@ -10,7 +10,6 @@ void draw() {
 }
 
 void mousePressed() {
-  // stroke((int)(Math.random()*255), (int)(Math.random()*255), (int)(Math.random()*255));
   inp = (float)Math.random();
   if (inp < .3) {  //want 30% execution here
     stroke(3);
